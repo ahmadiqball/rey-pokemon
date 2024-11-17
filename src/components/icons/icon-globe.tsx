@@ -1,6 +1,6 @@
 import { HTMLProps } from 'react';
 
-export function IconGloeb(props: HTMLProps<SVGSVGElement>) {
+export function IconGlobe(props: HTMLProps<SVGSVGElement>) {
   return (
     <svg
       width="12"
