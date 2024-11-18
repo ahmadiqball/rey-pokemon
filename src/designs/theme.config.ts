@@ -22,6 +22,9 @@ declare module '@mui/material/styles/createPalette' {
 
 export const theme = createTheme({
   cssVariables: true,
+  typography: {
+    fontFamily: 'Poppins, serif',
+  },
   palette: {
     common: {
       black: '#42494D',
@@ -33,7 +36,8 @@ export const theme = createTheme({
     },
     primary: {
       '200': '#FFD86C',
-      '300': '#FFCB3B',
+      '300': '#FDCB3C',
+      '400': '#FFCB3B',
       'main': '#E6AB09',
     },
     blue: {

@@ -1,6 +1,6 @@
 import { Container, Grid2, Typography } from '@mui/material';
-import { CoreButton } from '~/components/core';
-import { CoreImage } from '~/components/core';
+import { CoreButton } from '~/components/core/index.component';
+import { CoreImage } from '~/components/core/index.component';
 const images = [
   '/images/img-pokemon-blue.svg',
   '/images/img-pokemon-green.svg',
