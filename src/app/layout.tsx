@@ -22,7 +22,7 @@ export default function RootLayout({
         <AppRouterCacheProvider key="css">
           <ThemeProvider theme={theme}>
             <LayoutNavbar />
-            <Box sx={{ marginTop: '60px' }}>{children}</Box>
+            <Box sx={{ marginTop: '89px' }}>{children}</Box>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

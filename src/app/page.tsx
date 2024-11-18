@@ -1,4 +1,9 @@
+import { LandingBanner } from '~/components/landing/landing-banner';
+
 export default function Home() {
-  console.log('🚀 ~ Home ~ Home:');
-  return <div>a</div>;
+  return (
+    <main>
+      <LandingBanner />
+    </main>
+  );
 }

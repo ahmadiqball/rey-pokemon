@@ -45,10 +45,10 @@ export function LayoutNavbar() {
             <Link href={item.href} key={item.href}>
               <Typography
                 sx={{
-                  'color': route === item.href ? 'yellow.400' : null,
+                  'color': route === item.href ? 'primary.main' : null,
                   'fontWeight': route === item.href ? 700 : null,
                   ':hover': {
-                    color: 'yellow.400',
+                    color: 'primary.main',
                   },
                   'transition': 'linear 100ms',
                 }}

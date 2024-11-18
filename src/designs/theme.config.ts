@@ -31,10 +31,10 @@ export const theme = createTheme({
       '600': '#B3B6B8',
       '700': '#7B8082',
     },
-    yellow: {
+    primary: {
       '200': '#FFD86C',
       '300': '#FFCB3B',
-      '400': '#E6AB09',
+      'main': '#E6AB09',
     },
     blue: {
       '200': '#0571A6',
