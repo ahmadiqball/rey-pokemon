@@ -21,6 +21,7 @@ declare module '@mui/material/styles/createPalette' {
 }
 
 export const theme = createTheme({
+  cssVariables: true,
   palette: {
     common: {
       black: '#42494D',

@@ -4,4 +4,6 @@
   font-family: 'Poppins', serif;
   box-sizing: border-box;
   margin: 0;
+  color: var(--mui-palette-common-black);
+  text-decoration: none;
 }

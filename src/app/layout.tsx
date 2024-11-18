@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '~/designs/theme.config';
 import { LayoutNavbar } from '~/components/layouts/layout-navbar';
+import { Box } from '@mui/material';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,10 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LayoutNavbar />
-
         <AppRouterCacheProvider key="css">
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <LayoutNavbar />
+            <Box sx={{ marginTop: '60px' }}>{children}</Box>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
