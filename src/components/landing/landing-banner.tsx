@@ -1,6 +1,7 @@
 import { Container, Grid2, Typography } from '@mui/material';
-import { CoreButton } from '~/components/core/index.component';
 import { CoreImage } from '~/components/core/index.component';
+import { LandingBannerButton } from './landing-banner-button';
+
 const images = [
   '/images/img-pokemon-blue.svg',
   '/images/img-pokemon-green.svg',
@@ -24,9 +25,7 @@ export function LandingBanner() {
             Thousands of data compiled into one place
           </Typography>
 
-          <CoreButton variant="contained" color="primary">
-            Check PokèDex
-          </CoreButton>
+          <LandingBannerButton />
         </Grid2>
 
         <Grid2

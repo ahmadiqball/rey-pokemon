@@ -4,7 +4,11 @@ import { Pokemon } from '~/typings/pokemon.entity';
 
 export function LandingPokedex({ pokemons }: { pokemons: Array<Pokemon> }) {
   return (
-    <Box paddingY={{ xs: '32px', md: '80px' }} bgcolor="primary.300">
+    <Box
+      paddingY={{ xs: '32px', md: '80px' }}
+      bgcolor="primary.300"
+      id="landing-pokedex"
+    >
       <Container>
         <Box textAlign="center">
           <Typography fontWeight={700} fontSize={40}>
