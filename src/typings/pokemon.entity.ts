@@ -83,4 +83,5 @@ export interface Pokemon {
       url: string;
     };
   }>;
+  weight: number;
 }
