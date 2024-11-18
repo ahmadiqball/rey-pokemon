@@ -8,8 +8,8 @@ interface CoreImage extends BoxProps {
 
 export function CoreImage({ src, alt, ...props }: CoreImage) {
   return (
-    <Box {...props} sx={{ position: 'relative' }}>
-      <Image src={src} alt={alt} layout="fill" />
+    <Box {...props} position="relative">
+      <Image src={src} alt={alt} layout="fill" objectFit="contain" />
     </Box>
   );
 }

@@ -1,10 +1,13 @@
 import { Box, Typography } from '@mui/material';
 import { CoreTypeBadge } from './core-type-badge';
+import { Pokemon } from '~/typings/pokemon.entity';
+import { CoreImage } from './core-image';
 
-export function CorePokedexCard() {
+export function CorePokedexCard({ pokemon }: { pokemon: Pokemon }) {
   return (
     <Box
       bgcolor="white"
+      width="100%"
       padding="45px 25px"
       borderRadius={6}
       sx={{
@@ -15,7 +18,13 @@ export function CorePokedexCard() {
         },
       }}
     >
-      <Box />
+      <CoreImage
+        width="100%"
+        height={275}
+        src={pokemon.sprites.other['official-artwork']?.front_default || ''}
+        alt={`Image of ${pokemon.name}`}
+        sx={{ objectFit: 'contain' }}
+      />
       <Box>
         <Typography
           fontSize={20}
@@ -23,10 +32,15 @@ export function CorePokedexCard() {
           color="grey.600"
           marginTop={1.25}
         >
-          #001
+          {`#${pokemon.id.toString().padStart(4, '0')}`}
         </Typography>
-        <Typography fontSize={40} fontWeight={700} marginTop={1.25}>
-          Poke Name
+        <Typography
+          fontSize={40}
+          fontWeight={700}
+          marginTop={1.25}
+          textTransform="capitalize"
+        >
+          {pokemon.name}
         </Typography>
       </Box>
       <Box
@@ -36,8 +50,8 @@ export function CorePokedexCard() {
         columnGap={2.5}
         marginTop={1.25}
       >
-        {[...new Array(4)].map((item) => (
-          <CoreTypeBadge key={item} type="bug" />
+        {pokemon.types.map((type) => (
+          <CoreTypeBadge key={type.slot} type={type.type.name} />
         ))}
       </Box>
     </Box>

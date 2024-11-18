@@ -1,7 +1,8 @@
 import { Box, Container, Grid2, Typography } from '@mui/material';
 import { CorePokedexCard } from '../core/core-pokdex-card';
+import { Pokemon } from '~/typings/pokemon.entity';
 
-export function LandingPokedex() {
+export function LandingPokedex({ pokemons }: { pokemons: Array<Pokemon> }) {
   return (
     <Box paddingY={{ xs: '32px', md: '80px' }} bgcolor="primary.300">
       <Container>
@@ -15,10 +16,15 @@ export function LandingPokedex() {
           </Typography>
         </Box>
 
-        <Grid2 container columnSpacing={11.5} rowSpacing={6} marginTop={9}>
-          {[...new Array(20)].map((item) => (
-            <Grid2 key={item} size={4}>
-              <CorePokedexCard />
+        <Grid2
+          container
+          columnSpacing={{ xs: 4, xl: 11.5 }}
+          rowSpacing={{ xs: 4, xl: 6 }}
+          marginTop={9}
+        >
+          {pokemons.map((item) => (
+            <Grid2 key={item.id} size={{ xs: 12, sm: 6, xl: 4 }}>
+              <CorePokedexCard pokemon={item} />
             </Grid2>
           ))}
         </Grid2>
