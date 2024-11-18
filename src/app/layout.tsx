@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ThemeProvider } from '@emotion/react';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '~/designs/theme.config';
 
 export const metadata: Metadata = {
@@ -14,10 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider theme={theme}>
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    </ThemeProvider>
+    <html lang="en">
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
   );
 }

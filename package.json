@@ -10,9 +10,11 @@
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}"
   },
   "dependencies": {
+    "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.7",
+    "@mui/material-nextjs": "^6.1.7",
     "lint-staged": "^15.2.10",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
